@@ -8,7 +8,7 @@ import numpy as np
 
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-# Chartdash
+# Chart
 fig = make_subplots(rows=1, cols=1)
 fig.add_trace(
     go.Scatter(x=np.arange(0,10,1),

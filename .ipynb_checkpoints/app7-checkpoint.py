@@ -1,7 +1,5 @@
 import dash
-#import dash_html_components as html
 from dash import html
-#import dash_core_components as dcc
 from dash import dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
@@ -14,11 +12,7 @@ import pandas as pd
 
 from graphs import make_plot
 
-
-app = dash.Dash(__name__,title='MDA Class 2022',external_stylesheets=[dbc.themes.BOOTSTRAP],serve_locally = False)
-
-# add this for heroku
-server = app.server
+app = dash.Dash(__name__,title='MDA Class 2024',external_stylesheets=[dbc.themes.BOOTSTRAP],serve_locally = False)
 
 # Chart
 fig = make_subplots(rows=1, cols=1)
@@ -110,4 +104,4 @@ def update_chart(currency_value,start_date,end_date,nbr):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=2223)
+    app.run_server(debug=True)
